@@ -1,0 +1,45 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <script is:inline>
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      const savedTheme =
+        localStorage.getItem("theme") ?? (prefersDark ? "canopy" : "lodge");
+      document.documentElement.setAttribute("data-theme", savedTheme);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("theme-toggle");
+
+        btn?.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme");
+          const next = current === "canopy" ? "lodge" : "canopy";
+          document.documentElement.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+        });
+      });
+    </script>
+    <script src="../node_modules/flyonui/flyonui.js" is:inline></script>
+  </head>
+  <body>
+    <Header />
+
+    <main class="flex flex-col min-h-screen">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@plugin "flyonui" {
+    themes: false;
+}
+
+;
+@import "flyonui/variants.css";
+@source "../node_modules/flyonui/flyonui.js";
+@plugin "@iconify/tailwind4";
+
+@plugin "flyonui/theme" {
+    name: "canopy";
+    default: false;
+    prefersdark: true;
+    color-scheme: dark;
+
+    /* Deep forest night base */
+    --color-base-100: oklch(18% 0.018 155);
+    --color-base-200: oklch(15% 0.015 155);
+    --color-base-300: oklch(13% 0.012 155);
+    --color-base-content: oklch(88% 0.025 120);
+
+    /* Warm moss green primary */
+    --color-primary: oklch(65% 0.14 148);
+    --color-primary-content: oklch(14% 0.03 148);
+
+    /* Amber/campfire secondary */
+    --color-secondary: oklch(72% 0.16 55);
+    --color-secondary-content: oklch(15% 0.04 55);
+
+    /* Soft sage accent */
+    --color-accent: oklch(70% 0.1 140);
+    --color-accent-content: oklch(16% 0.03 140);
+
+    --color-neutral: oklch(24% 0.018 155);
+    --color-neutral-content: oklch(85% 0.02 120);
+
+    --color-info: oklch(68% 0.13 215);
+    --color-info-content: oklch(14% 0.03 215);
+    --color-success: oklch(68% 0.15 152);
+    --color-success-content: oklch(14% 0.03 152);
+    --color-warning: oklch(78% 0.16 80);
+    --color-warning-content: oklch(18% 0.04 80);
+    --color-error: oklch(65% 0.2 22);
+    --color-error-content: oklch(14% 0.03 22);
+
+    --radius-selector: 0.75rem;
+    --radius-field: 0.5rem;
+    --radius-box: 1rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 0;
+    --noise: 0;
+}
+
+@plugin "flyonui/theme" {
+    name: "lodge";
+    default: true;
+    prefersdark: false;
+    color-scheme: light;
+
+    /* Warm cream base — like natural linen */
+    --color-base-100: oklch(97% 0.012 80);
+    --color-base-200: oklch(93% 0.016 78);
+    --color-base-300: oklch(87% 0.022 76);
+    --color-base-content: oklch(22% 0.02 60);
+
+    /* Forest green primary */
+    --color-primary: oklch(42% 0.1 150);
+    --color-primary-content: oklch(97% 0.01 150);
+
+    /* Warm terracotta secondary */
+    --color-secondary: oklch(58% 0.14 40);
+    --color-secondary-content: oklch(97% 0.01 40);
+
+    /* Sage accent */
+    --color-accent: oklch(65% 0.1 145);
+    --color-accent-content: oklch(20% 0.04 145);
+
+    --color-neutral: oklch(35% 0.02 60);
+    --color-neutral-content: oklch(92% 0.01 60);
+
+    --color-info: oklch(62% 0.12 220);
+    --color-info-content: oklch(97% 0.01 220);
+    --color-success: oklch(55% 0.14 155);
+    --color-success-content: oklch(97% 0.01 155);
+    --color-warning: oklch(72% 0.15 75);
+    --color-warning-content: oklch(20% 0.04 75);
+    --color-error: oklch(55% 0.2 25);
+    --color-error-content: oklch(97% 0.01 25);
+
+    --radius-selector: 0.75rem;
+    --radius-field: 0.5rem;
+    --radius-box: 1rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1.5px;
+    --depth: 0;
+    --noise: 0;
+
+}
