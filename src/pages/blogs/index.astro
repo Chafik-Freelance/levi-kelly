@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Card from "../../components/Card.astro";
+import BlogCard from "../../components/BlogCard.astro";
 
 const blogs = await getCollection('blogs');
 ---
@@ -9,7 +9,7 @@ const blogs = await getCollection('blogs');
 <BaseLayout>
   <section class="mx-auto max-w-7xl mt-16 px-8 py-4">
     <div class="grid grid-cols-1 gap-8 my-8 mx-auto px-4 py-4">
-      {blogs.map((blog) => <Card blog={blog} />)}
+      {blogs.map((blog) => <BlogCard blog={blog} />)}
     </div>
   </section>
 </BaseLayout>

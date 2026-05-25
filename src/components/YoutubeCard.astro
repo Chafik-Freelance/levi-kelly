@@ -1,0 +1,16 @@
+---
+const {video} = Astro.props
+---
+
+<div class="card group hover:shadow-sm sm:max-w-sm">
+  <figure>
+    <img src={video.thumbnail} alt={video.title} class="transition-transform duration-500 group-hover:scale-110" />
+  </figure>
+  <div class="card-body">
+    <h5 class="card-title mb-2.5">{video.title}</h5>
+    <p class="mb-6">{video.published}</p>
+    <div class="card-actions">
+      <a class="btn btn-primary" href={video.link} target="_blank">Watch Video</a>
+    </div>
+  </div>
+</div>
