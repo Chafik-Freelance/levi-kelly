@@ -1,0 +1,204 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="bg-base-100 min-h-screen">
+
+    <!-- Page header -->
+    <div class="relative overflow-hidden bg-base-200 py-16 px-4 border-b border-base-300">
+      <div class="relative max-w-7xl mx-auto">
+        <p class="text-primary font-semibold tracking-widest uppercase text-xs mb-3">Let's connect</p>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-base-content tracking-tight leading-none">
+          Get in touch.
+        </h1>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+      <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+
+        <!-- Left — message -->
+        <div class="lg:w-2/5 lg:sticky lg:top-24 lg:self-start">
+          <p class="text-primary font-semibold tracking-widest uppercase text-xs mb-6">Before you write</p>
+
+          <p class="text-base-content text-xl md:text-2xl font-semibold leading-snug mb-8 border-l-4 border-secondary pl-5">
+            If you are an owner of a unique stay or a brand interested in collaborating, get in touch!
+          </p>
+
+          <p class="text-base-content/70 text-lg leading-relaxed mb-6">
+            If you are reaching out regarding a property, please include links to your
+            property listing and social media. Can't wait to hear from you!
+          </p>
+
+          <!-- Important note -->
+          <div class="bg-base-200 border border-base-300 rounded-2xl p-6">
+            <div class="flex gap-3 items-start">
+              <span class="icon-[tabler--info-circle] size-5 text-secondary shrink-0 mt-0.5"></span>
+              <div>
+                <p class="text-base-content font-semibold text-sm mb-1">Heads up</p>
+                <p class="text-base-content/60 text-sm leading-relaxed">
+                  I will try my best to get back with you. I usually reply to the listings
+                  I am interested in featuring to save time.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider with icon -->
+          <div class="flex items-center gap-4 my-10">
+            <div class="flex-1 h-px bg-base-300"></div>
+            <span class="icon-[tabler--mail-heart] size-5 text-primary"></span>
+            <div class="flex-1 h-px bg-base-300"></div>
+          </div>
+
+          <p class="text-base-content/50 text-sm">
+            Prefer email? Reach out directly at
+            <a href="mailto:levi@levimkelly.com" class="text-secondary hover:underline font-medium">
+              levi@levimkelly.com
+            </a>
+          </p>
+        </div>
+
+        <!-- Right — form -->
+        <div class="lg:w-3/5">
+          <form class="space-y-6">
+
+            <!-- Required fields label -->
+            <p class="text-base-content/40 text-xs uppercase tracking-widest">Required fields</p>
+
+            <!-- Name row -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-base-content mb-2" for="first-name">
+                  First name <span class="text-secondary">*</span>
+                </label>
+                <input
+                  id="first-name"
+                  type="text"
+                  required
+                  placeholder="Levi"
+                  class="input input-bordered w-full bg-base-200 focus:border-primary"
+                />
+              </div>
+              <div class="flex-1">
+                <label class="block text-sm font-medium text-base-content mb-2" for="last-name">
+                  Last name <span class="text-secondary">*</span>
+                </label>
+                <input
+                  id="last-name"
+                  type="text"
+                  required
+                  placeholder="Kelly"
+                  class="input input-bordered w-full bg-base-200 focus:border-primary"
+                />
+              </div>
+            </div>
+
+            <!-- Reason for contact -->
+            <div>
+              <label class="block text-sm font-medium text-base-content mb-2" for="reason">
+                I am a… <span class="text-secondary">*</span>
+              </label>
+              <select
+                id="reason"
+                required
+                class="select select-bordered w-full bg-base-200 focus:border-primary"
+              >
+                <option value="" disabled selected>Select one…</option>
+                <option value="property">Property owner / manager</option>
+                <option value="brand">Brand / company</option>
+                <option value="hi">Just saying hi!</option>
+              </select>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-sm font-medium text-base-content mb-2" for="email">
+                Email <span class="text-secondary">*</span>
+              </label>
+              <input
+                id="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+                class="input input-bordered w-full bg-base-200 focus:border-primary"
+              />
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label class="block text-sm font-medium text-base-content mb-2" for="message">
+                Message <span class="text-secondary">*</span>
+              </label>
+              <textarea
+                id="message"
+                required
+                rows="5"
+                placeholder="Tell me about your property or what you have in mind…"
+                class="textarea textarea-bordered w-full bg-base-200 focus:border-primary resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Optional fields label -->
+            <div class="flex items-center gap-4 pt-2">
+              <div class="flex-1 h-px bg-base-300"></div>
+              <p class="text-base-content/40 text-xs uppercase tracking-widest shrink-0">Optional</p>
+              <div class="flex-1 h-px bg-base-300"></div>
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label class="block text-sm font-medium text-base-content mb-2" for="phone">
+                Phone number
+              </label>
+              <input
+                id="phone"
+                type="tel"
+                placeholder="+1 (555) 000-0000"
+                class="input input-bordered w-full bg-base-200 focus:border-primary"
+              />
+            </div>
+
+            <!-- Property listing -->
+            <div>
+              <label class="block text-sm font-medium text-base-content mb-2" for="listing">
+                Property listing URL
+              </label>
+              <input
+                id="listing"
+                type="url"
+                placeholder="https://airbnb.com/rooms/..."
+                class="input input-bordered w-full bg-base-200 focus:border-primary"
+              />
+            </div>
+
+            <!-- Website -->
+            <div>
+              <label class="block text-sm font-medium text-base-content mb-2" for="website">
+                Website / social media
+              </label>
+              <input
+                id="website"
+                type="url"
+                placeholder="https://instagram.com/yourhandle"
+                class="input input-bordered w-full bg-base-200 focus:border-primary"
+              />
+            </div>
+
+            <!-- Submit -->
+            <div class="pt-4">
+              <button type="submit" class="btn btn-primary w-full sm:w-auto px-10">
+                <span class="icon-[tabler--send] size-5"></span>
+                Send message
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -44,4 +44,69 @@ interface Video {
       {videos.map((video: Video) => <YoutubeCard video={video} />)}
     </div>
   </section>
+
+ <section class="px-4 md:px-8 py-16 mt-8 bg-base-100">
+  <div class="max-w-5xl mx-auto">
+
+    <!-- Card -->
+    <div class="relative overflow-hidden rounded-3xl p-10 md:p-16"
+      style="background: var(--color-base-200); border: 1.5px solid var(--color-base-300);">
+
+      <!-- Decorative background blobs -->
+      <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full opacity-10 blur-3xl pointer-events-none"
+        style="background: var(--color-primary);"></div>
+      <div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full opacity-10 blur-3xl pointer-events-none"
+        style="background: var(--color-secondary);"></div>
+
+      <div class="relative flex flex-col lg:flex-row gap-10 lg:gap-16" style="align-items: center;">
+
+        <!-- Left — text -->
+        <div style="flex: 1; min-width: 0;">
+          <p class="text-primary font-semibold tracking-widest uppercase text-xs mb-4">Stay in the loop</p>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-base-content leading-tight mb-5">
+            Join the<br/>newsletter.
+          </h2>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="h-px bg-base-300" style="width: 3rem;"></div>
+            <span class="icon-[tabler--mail] size-4 text-primary"></span>
+          </div>
+          <p class="text-base-content/60 text-base leading-relaxed max-w-sm">
+            Video uploads, travel content, and a few special surprises — straight to your inbox.
+            Expect 3–4 emails a month. No spam, ever. We respect your privacy.
+          </p>
+        </div>
+
+        <!-- Right — subscribe -->
+        <div style="flex: 0 0 auto; width: 100%; max-width: 380px;">
+          <div class="rounded-2xl p-6 md:p-8"
+            style="background: var(--color-base-100); border: 1.5px solid var(--color-base-300);">
+
+            <p class="text-sm font-semibold text-base-content mb-1">Your email address</p>
+            <p class="text-xs text-base-content/40 mb-5">You'll receive a confirmation email — check your spam!</p>
+
+            <div class="space-y-3">
+              <input
+                type="email"
+                placeholder="you@example.com"
+                class="w-full rounded-xl px-4 py-3 text-base-content placeholder-base-content/30 outline-none transition-all"
+                style="background: var(--color-base-200); border: 1.5px solid var(--color-base-300);"
+                onfocus="this.style.borderColor='var(--color-primary)'"
+                onblur="this.style.borderColor='var(--color-base-300)'"
+              />
+              <button class="btn btn-primary w-full">
+                <span class="icon-[tabler--mail-forward] size-5"></span>
+                Subscribe
+              </button>
+            </div>
+
+            <p class="text-xs text-base-content/30 text-center mt-4">
+              Unsubscribe anytime. No hard feelings.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 </BaseLayout>
