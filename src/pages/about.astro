@@ -1,0 +1,85 @@
+---
+import Testimonials from "../components/Testimonials.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+
+const numbers = [
+  { value: "750K+", label: "Subscribers" },
+  { value: "144M+", label: "Total Views" },
+  { value: "400+", label: "Videos" },
+  { value: "6 yrs", label: "Full-time Creator" },
+];
+---
+
+<BaseLayout>
+  <section class="bg-base-100">
+    <div
+      class="grid max-w-7xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+    >
+      <div
+        class="hidden lg:mt-0 lg:col-span-5 lg:flex lg:items-center lg:justify-center"
+      >
+        <div class="relative">
+          <div
+            class="absolute inset-0 rounded-full bg-primary/20 blur-3xl scale-110"
+          >
+          </div>
+          <img
+            src="/images/levi-about-photo.webp"
+            alt="Levi Kelly"
+            class="relative ring-4 ring-primary/30"
+          />
+        </div>
+      </div>
+      <div class="ml-auto place-self-center lg:col-span-7">
+        <h1
+          class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-base-content"
+        >
+          Hey, there!
+        </h1>
+        <p
+          class="max-w-2xl mb-6 lg:mb-8 md:text-lg lg:text-xl text-base-content/60"
+        >
+          Over the past 6 years I have married my enthusiasm for videography and
+          travel by creating a YouTube channel dedicated to showcasing unique,
+          short-term stays. There you can find the best of tiny homes,
+          treehouses, container homes, and luxury accommodations. You can also
+          stream full episodes of my show, Tiny BNB on the Hulu. My goal is to
+          benefit property owners who are looking to promote their homes, those
+          who are planning a weekend away, or those looking for inspiration for
+          their next unique home project. In 2019, I pursued YouTube full time
+          and I am blessed to say that it has grown beyond what I could have
+          imagined. In 2021, my wife, Savannah, decided to leave her job as a
+          High School Spanish teacher to work alongside me and stay home with
+          our son, Weston & Bishop. Together, we strive to create high quality,
+          valuable content that we genuinely enjoy. Most of our time is consumed
+          by our sweet yet extremely active toddler. In our (very) spare time,
+          we like to hang out with our family, play games, or enjoy a big bowl
+          of cereal while watching The Chosen.<br /><br />
+
+          Thanks for stopping by!<br />
+          -Levi & Savannah
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-8 py-4 mt-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-16 md:gap-x-28">
+      {
+        numbers.map((number) => (
+          <div class="bg-base-200 rounded-2xl p-6 text-center border border-base-300">
+            <p class="text-3xl font-extrabold text-primary mb-1">{number.value}</p>
+            <p class="text-base-content/60 text-sm font-medium uppercase tracking-wide">
+              {number.label}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-8 py-4 mt-16">
+    <Testimonials />
+  </section>
+</BaseLayout>
