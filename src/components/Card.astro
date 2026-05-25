@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    blog: CollectionEntry<'blogs'>
+}
+
+const {blog} = Astro.props;
+---
+
+<div class="card sm:card-side max-w-sm sm:max-w-full">
+  <figure class="max-w-xl">
+    <img
+      src={blog.data.image}
+      alt={blog.data?.title}
+    />
+  </figure>
+  <div class="card-body max-w-sm lg:max-w-xl">
+    <h5 class="card-title mb-0.5">{blog.data?.title}</h5>
+    <p class="mb-2 line-clamp-5">
+      {blog.data.overview}
+    </p>
+    <div class="card-actions flex-end">
+      <a class="btn btn-primary" href={`/blogs/${blog.id}`}>Read more</a>
+    </div>
+  </div>
+</div>
