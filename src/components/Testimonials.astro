@@ -12,15 +12,15 @@ import testimonials from "../content/testimonials.json";
       <div>
         <div class="space-y-4">
           <p class="text-primary text-sm font-medium uppercase">
-            Real Feedback
+            Real Customers
           </p>
           <h2
-            class="text-base-content text-xl font-semibold md:text-2xl lg:text-3xl"
+            class="text-base-content text-2xl font-semibold md:text-3xl lg:text-4xl"
           >
-            What People Are Saying
+            Customers Feedback
           </h2>
           <p class="text-base-content/80 text-xl">
-            From home owners to followers on social media, here's how they feel.
+            From career changes to dream jobs, here's how FlyonUI helped.
           </p>
         </div>
         <div class="mt-10 flex gap-4">
@@ -39,13 +39,13 @@ import testimonials from "../content/testimonials.json";
       </div>
       <div class="carousel rounded-box">
         <div class="carousel-body gap-6 opacity-0">
-          <!-- Slide 4 -->
           {
             testimonials.map((testimonial) => (
               <div class="carousel-slide">
                 <div class="card card-border hover:border-primary transition-border h-full shadow-none duration-300">
                   <div class="card-body gap-5">
                     <div class="flex items-center gap-3">
+                      
                       <div>
                         <h4 class="text-base-content font-medium">
                           {testimonial.name}
@@ -55,8 +55,11 @@ import testimonials from "../content/testimonials.json";
                         </p>
                       </div>
                     </div>
+                    
 
-                    <p class="text-base-content/80 line-clamp-6">{testimonial.message}</p>
+                    <p class="text-base-content/80">
+                      {testimonial.message}
+                    </p>
                   </div>
                 </div>
               </div>
